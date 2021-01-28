@@ -18,11 +18,9 @@ const Hero = () => (
                     class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-green-500 rounded-full">
-                      La beta è online
+                      beta
                     </span>
-                    <span class="ml-4 text-sm">
-                      Visita Space Hackability Beta
-                    </span>
+                    <span class="ml-4 text-sm">Visita Space Hackability</span>
                     <svg
                       class="ml-2 w-5 h-5 text-gray-500"
                       xmlns="http://www.w3.org/2000/svg"
@@ -155,8 +153,8 @@ const Footer = () => (
 )
 
 const KickOff = () => (
-  <div className="m-auto w-full flex justify-center my-10">
-    <YouTube videoId="2TiVLYdgF_c" />
+  <div className="m-auto w-full flex justify-center my-10 max-w-full">
+    <YouTube className="max-w-full" videoId="2TiVLYdgF_c" />
   </div>
 )
 
@@ -165,7 +163,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <KickOff />
-    <div className="max-w-prose m-auto prose">
+    <div className="max-w-prose md:m-auto prose m-2">
       <h3>SOS Supporto dev!</h3>
 
       <p>
