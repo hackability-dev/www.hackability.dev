@@ -156,7 +156,10 @@ const Footer = () => (
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="🆘 SOS Supporto dev! 🆘" />
+    <SEO
+      title="Costruiamo insieme Space Hackability"
+      description="Sei un programmatore, un nerd, uno smanettone? Abbiamo più di 120 progetti in open source e un portale per documentarli e metterli a disposizione di tutti che funziona meno bene di quanto vorremmo."
+    />
     <Hero />
     <div className="max-w-prose md:m-auto prose m-2">
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
