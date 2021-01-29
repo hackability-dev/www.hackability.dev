@@ -28,6 +28,7 @@
     "react-youtube": "^7.13.1"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
     "postcss": "^8.2.4",
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.2",

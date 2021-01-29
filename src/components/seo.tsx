@@ -26,6 +26,7 @@ const SEO: React.FC<SeoPros> = ({
             description
             author
             image
+            siteUrl
           }
         }
       }
@@ -33,7 +34,54 @@ const SEO: React.FC<SeoPros> = ({
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const img = image || site.siteMetadata.image
+  let img: string = image || site.siteMetadata.image
+  if (!img.startsWith("http")) {
+    img = `${site.siteMetadata.siteUrl}${img}`
+  }
+
+  const pageMeta = [
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      property: "og:image",
+      content: img,
+    },
+    {
+      property: `og:title`,
+      content: title,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      name: `twitter:card`,
+      content: `summary`,
+    },
+    {
+      name: `twitter:creator`,
+      content: site.siteMetadata.author,
+    },
+    {
+      name: `twitter:title`,
+      content: title,
+    },
+    {
+      name: `twitter:description`,
+      content: metaDescription,
+    },
+    {
+      name: `twitter:image`,
+      content: img,
+    },
+    ...meta,
+  ]
 
   return (
     <Helmet
@@ -42,44 +90,7 @@ const SEO: React.FC<SeoPros> = ({
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: "og:image",
-          content: img,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
+      meta={pageMeta}
     />
   )
 }
