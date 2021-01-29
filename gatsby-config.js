@@ -3,6 +3,7 @@ module.exports = {
     title: `hackability.dev`,
     description: `La community di sviluppatori per creare Space Hackability!`,
     author: `@hackability`,
+    siteUrl: "https://www.hackability.dev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
