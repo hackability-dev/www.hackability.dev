@@ -154,15 +154,9 @@ const Footer = () => (
   </footer>
 )
 
-const KickOff = () => (
-  <div className="m-auto w-full flex justify-center my-10 max-w-full">
-    <YouTube className="max-w-full" videoId="2TiVLYdgF_c" />
-  </div>
-)
-
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="🆘 SOS Supporto dev! 🆘" />
     <Hero />
     <div className="max-w-prose md:m-auto prose m-2">
       <MDXRenderer>{data.mdx.body}</MDXRenderer>

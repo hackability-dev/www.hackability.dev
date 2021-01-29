@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `hackability.dev`,
-    description: `Entra a far parte della community di sviluppatori per realizzare il progetto Space Hackability!`,
+    description: `La community di sviluppatori per creare Space Hackability!`,
     author: `@hackability`,
   },
   plugins: [
@@ -26,13 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `hackability.dev`,
+        short_name: `hackability.dev`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#52851E`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-emotion`,
