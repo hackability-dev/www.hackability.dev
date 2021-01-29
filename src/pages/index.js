@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import YouTube from "react-youtube"
+import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const Hero = () => (
   <div class="mb-10">
@@ -158,63 +160,23 @@ const KickOff = () => (
   </div>
 )
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <KickOff />
     <div className="max-w-prose md:m-auto prose m-2">
-      <h3>SOS Supporto dev!</h3>
-
-      <p>
-        Ciao amici di LinkedIn! Alcuni di voi sanno che sono fondatore di
-        Hackability , un’associazione che si occupa di sviluppare soluzioni per
-        persone con disability in modalità open source e inclusiva, con
-        metodologia codesign!
-      </p>
-
-      <p>
-        L’anno scorso, nel tempo libero, ho sviluppato https://lnkd.in/eMiR8jN!
-        Una piattaforma che vuole essere il punto di raccolta di tutti i
-        progetti sviluppati dall’associazione! Finalmente ho convinto il
-        presidente Carlo a darmi un po’ di budget per avere una piccola
-        infrastruttura su cui deployare una versione decente della piattaforma,
-        e Chiara si è offerta di aiutarci lato “recruiting” e comunicazione!
-        Quindi mi piacerebbe sviluppare in live su YouTube dato che con Jaga
-        ormai la domenica mi diverto troppo!
-      </p>
-
-      <p>
-        A qualcuno qui su LinkedIn andrebbe di darmi una mano? Io sono un po’
-        carente in ambito frotend grafico! Non paghiamo, ma c’è veramente tanto
-        divertimento e smanettamento!
-      </p>
-
-      <p>Ecco cosa pensavo io:</p>
-
-      <ul>
-        <li>App in next js per sito progetti e sito vetrina unificati</li>
-        <li>CI/CD su gitlab</li>
-        <li>deploy su #kubernello</li>
-        <li>in mezzo ci voglio mettere qualcosa in golang :D</li>
-        <li>tanti eastereggs da mettere nell’app</li>
-        <li>tutto lo sviluppo in stream su YouTube</li>
-      </ul>
+      <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </div>
-
-    <div class="w-full m-auto mt-10 text-white text-center">
-      <div class="sm:flex justify-center">
-        <a
-          href="https://forms.gle/Pam4YXcAB21M9Egx5"
-          class="block text-center max-w-2xl py-3 px-4 rounded-md shadow bg-green-500 text-white font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300 focus:ring-offset-gray-900"
-        >
-          Voglio dare una mano!
-        </a>
-      </div>
-    </div>
-
     <Footer />
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query PostPage {
+    mdx(slug: { eq: "md/help" }) {
+      body
+    }
+  }
+`
