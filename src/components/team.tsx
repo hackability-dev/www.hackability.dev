@@ -88,7 +88,7 @@ const TeamMember: FC<{ member: TeamMember }> = ({ member }) => {
             <li>
               <a
                 target="_blank"
-                href={`https://www.youtube.com/c/${member.linkedin}`}
+                href={`https://www.youtube.com/c/${member.youtube}`}
                 className="text-gray-400 hover:text-gray-500"
               >
                 <span className="sr-only">LinkedIn</span>
