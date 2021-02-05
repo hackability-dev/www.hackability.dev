@@ -1,4 +1,4 @@
-- nick: ludusrusso
+- id: ludusrusso
   name: Ludovico Russo
   bio: Fullstack dev
   twitter: ludusrusso
@@ -6,7 +6,7 @@
   youtube: ludusrusso
   site: https://ludusrusso.space/
   image: ./img/guests/ludusrusso.jpg
-- nick: davideimola
+- id: davideimola
   name: Davide Imola
   bio: DevOps Engineer
   twitter: davideimola
@@ -14,7 +14,7 @@
   youtube: DavideImolaIT
   site: https://davideimola.com/
   image: ./img/guests/davideimola.jpg
-# - nick: a unique nick for internal reference
+# - id: a unique nick for internal reference
 #   name: <Your name>
 #   bio: <Short bio>
 #   twitter: <twitter account>
