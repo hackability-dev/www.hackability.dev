@@ -125,9 +125,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
   if (now.getTime() > date.getTime()) {
     return (
       <p className="text-sm font-medium text-red-600">
-        <span>
-          Live in Corso
-        </a>
+        <span>Live in Corso</span>
       </p>
     )
   }
@@ -137,7 +135,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
       <p className="text-sm font-medium text-indigo-600">
         <span>
           Programmato il {dateformat(date, 'dd/mm/yyyy  "alle" HH:MM')}
-        </a>
+        </span>
       </p>
     )
   }
@@ -153,9 +151,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
 
   return (
     <p className="text-sm font-medium text-red-600">
-      <span>
-        Live tra pochi secondi
-      </a>
+      <span>Live tra pochi secondi</span>
     </p>
   )
 }
