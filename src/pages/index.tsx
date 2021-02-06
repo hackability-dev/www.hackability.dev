@@ -166,11 +166,12 @@ const IndexPage = ({ data }) => (
       description="Sei un programmatore, un nerd, uno smanettone? Abbiamo più di 120 progetti in open source e un portale per documentarli e metterli a disposizione di tutti che funziona meno bene di quanto vorremmo."
     />
     <Hero />
+    <Events events={data.events.nodes} />
+    <Team members={data.team.edges.map(e => e.node)} />
+
     <div className="max-w-prose md:m-auto prose m-2">
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </div>
-    <Events events={data.events.nodes} />
-    <Team members={data.team.edges.map(e => e.node)} />
     <Footer />
   </Layout>
 )
@@ -182,7 +183,10 @@ export const query = graphql`
     mdx(slug: { eq: "md/help" }) {
       body
     }
-    events: allMdx(filter: { fileAbsolutePath: { regex: "/events/" } }) {
+    events: allMdx(
+      filter: { fileAbsolutePath: { regex: "/events/" } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
       nodes {
         slug
         body

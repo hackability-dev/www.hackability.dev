@@ -89,6 +89,14 @@ const Event: FC<{ event: Event }> = ({ event }) => {
               />
             </div>
           ))}
+          <div className="flex-grow"></div>
+          <a
+            href={`https://youtu.be/${event.frontmatter.youtube}`}
+            target="_blank"
+            className="bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
+          >
+            Guarda su YouTube
+          </a>
         </div>
       </div>
     </div>
