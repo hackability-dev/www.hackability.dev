@@ -70,14 +70,14 @@ const Event: FC<{ event: Event }> = ({ event }) => {
       <div className="flex-1 bg-white p-6 flex flex-col justify-between">
         <div className="flex-1">
           <EventDate date={date} />
-          <a href="#" className="block mt-2">
+          <div className="mt-2">
             <p className="text-xl font-semibold text-gray-900">
               {event.frontmatter.title}
             </p>
             <p className="mt-3 text-base text-gray-500">
               {event.frontmatter.description}
             </p>
-          </a>
+          </div>
         </div>
         <div className="mt-6 flex items-center mx-1">
           {event.frontmatter.guests.map(guest => (
@@ -117,9 +117,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
   if (now.getTime() > date.getTime() + 2 * 60 * 60 * 1000) {
     return (
       <p className="text-sm font-medium text-green-600">
-        <a href="#" className="hover:underline">
-          Evento passato
-        </a>
+        <span>Evento passato</span>
       </p>
     )
   }
@@ -127,7 +125,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
   if (now.getTime() > date.getTime()) {
     return (
       <p className="text-sm font-medium text-red-600">
-        <a href="#" className="hover:underline">
+        <span>
           Live in Corso
         </a>
       </p>
@@ -137,7 +135,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
   if (now.getTime() < date.getTime() - 2 * 60 * 60 * 1000) {
     return (
       <p className="text-sm font-medium text-indigo-600">
-        <a href="#" className="hover:underline">
+        <span>
           Programmato il {dateformat(date, 'dd/mm/yyyy  "alle" HH:MM')}
         </a>
       </p>
@@ -155,7 +153,7 @@ const EventDate: FC<{ date: Date }> = ({ date }) => {
 
   return (
     <p className="text-sm font-medium text-red-600">
-      <a href="#" className="hover:underline">
+      <span>
         Live tra pochi secondi
       </a>
     </p>
