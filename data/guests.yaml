@@ -14,6 +14,14 @@
   youtube: DavideImolaIT
   site: https://davideimola.com/
   image: ./img/guests/davideimola.jpg
+- nick: log2
+  name: Lorenzo Gallucci
+  bio: DevOps Engineer
+  twitter: log_two
+  linkedin: log2
+  youtube: LorenzoGallucci
+  site: https://medium.com/@log2
+  image: ./img/guests/log2.jpg
 # - nick: a unique nick for internal reference
 #   name: <Your name>
 #   bio: <Short bio>
