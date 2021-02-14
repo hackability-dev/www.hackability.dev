@@ -1,6 +1,5 @@
 import React, { FC } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
 
 const Layout: FC = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -13,12 +12,7 @@ const Layout: FC = ({ children }) => {
     }
   `)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      {children}
-    </>
-  )
+  return <>{children}</>
 }
 
 export default Layout

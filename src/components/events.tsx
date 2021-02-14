@@ -1,10 +1,12 @@
 import { FC, useEffect, useState } from "react"
 import Image from "gatsby-image"
 import dateformat from "dateformat"
+import { Link } from "gatsby"
 
 export interface Event {
   id: string
   body: string
+  slug: string
   frontmatter: {
     description: string
     date: Date
@@ -83,20 +85,20 @@ const Event: FC<{ event: Event }> = ({ event }) => {
           {event.frontmatter.guests.map(guest => (
             <div className="flex-shrink-0" key={guest.id}>
               <Image
-                className="h-10 w-10 rounded-full -mx-1"
+                className="h-10 w-10 rounded-full -mx-1 border-2 border-white"
                 fixed={guest.image.childImageSharp.fixed}
                 alt={guest.name}
               />
             </div>
           ))}
           <div className="flex-grow"></div>
-          <a
-            href={`https://youtu.be/${event.frontmatter.youtube}`}
+          <Link
+            to={`/events/${event.slug}`}
             target="_blank"
             className="bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
           >
-            Guarda su YouTube
-          </a>
+            Dettagli
+          </Link>
         </div>
       </div>
     </div>
