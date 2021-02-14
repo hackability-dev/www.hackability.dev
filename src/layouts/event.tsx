@@ -14,7 +14,7 @@ const EventPage: React.FC<{ data: any }> = ({ data }) => {
       <SEO
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.description}
-        image={data.mdx.frontmatter.image.childImageSharp.fluid.src}
+        image={data.mdx.frontmatter.featureImage.childImageSharp.fluid.src}
       />
       <Header />
       <div className="max-w-prose md:m-auto  m-2">
