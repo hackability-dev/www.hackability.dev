@@ -11,6 +11,11 @@ import { Header } from "../components/header"
 const EventPage: React.FC<{ data: any }> = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title={data.mdx.frontmatter.title}
+        description={data.mdx.frontmatter.description}
+        image={data.mdx.frontmatter.image.childImageSharp.fluid.src}
+      />
       <Header />
       <div className="max-w-prose md:m-auto  m-2">
         <div className="prose">
@@ -29,10 +34,6 @@ const EventPage: React.FC<{ data: any }> = ({ data }) => {
           <p>{data.mdx.frontmatter.description}</p>
           <Image
             fluid={data.mdx.frontmatter.featureImage.childImageSharp.fluid}
-          />
-          <SEO
-            title={data.mdx.frontmatter.title}
-            description={data.mdx.frontmatter.description}
           />
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
