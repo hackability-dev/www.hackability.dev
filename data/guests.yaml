@@ -33,6 +33,13 @@
   linkedin: cbisi
   twitter: KiabiCbisi
   image: ./img/guests/chiarabisi.jpeg
+   - id: GiandomenicoRiceputi
+   name: <Giandomenico Riceputi>
+   bio: <Frontend>
+   twitter: <@Giando_Riceputi>
+   linkedin: <giandomenicoriceputi>
+   youtube: <giandomenico Riceputi>
+   site: <🚧 🛠 🚧>
 #
 # - id: a unique nick for internal reference
 #   name: <Your name>
