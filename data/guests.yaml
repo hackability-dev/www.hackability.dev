@@ -33,6 +33,12 @@
   linkedin: cbisi
   twitter: KiabiCbisi
   image: ./img/guests/chiarabisi.jpeg
+- id: lucabrognara
+  name: Luca Brognara
+  bio: Frontend dev
+  linkedin: lucabrognara
+  twitter: lucabrognara
+  image: ./img/guests/lucabrognara.jpg
 - id: giandodev
   name: Giandomenico Riceputi
   bio: Frontend
