@@ -46,6 +46,12 @@
   linkedin: giandomenicoriceputi
   youtube: UCXz0rIzLQTHHTT4a8QYA6kA
   image: ./img/guests/giandodev.jpg
+- id: aletornesello
+  name: Alessandro Tornesello
+  bio: Frontend dev
+  linkedin: alessandro-tornesello
+  site: https://alessandrotornesello.it
+  image: ./img/guests/aletornesello.png
 #
 # - id: a unique nick for internal reference
 #   name: <Your name>
