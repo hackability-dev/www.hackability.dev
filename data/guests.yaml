@@ -52,6 +52,12 @@
   linkedin: alessandro-tornesello
   site: https://alessandrotornesello.it
   image: ./img/guests/aletornesello.png
+- id: johnpaul
+  name: John Paul Du
+  bio: Frontend Dev
+  linkedin: john-paul-du-0aa021144
+  image: ./img/guests/johnpaul.jpg
+#
 #
 # - id: a unique nick for internal reference
 #   name: <Your name>
