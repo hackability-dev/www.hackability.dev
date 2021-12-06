@@ -22,13 +22,20 @@ const EventPage: React.FC<{ data: any }> = ({ data }) => {
           <h1>{data.mdx.frontmatter.title}</h1>
         </div>
         <div className="my-10">
-          <a
+          {data.mdx.frontmatter.youtube && <a
             href={`https://youtu.be/${data.mdx.frontmatter.youtube}`}
             target="_blank"
             className="block text-center no-underline bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
           >
             Guarda su YouTube
-          </a>
+          </a>}
+          {data.mdx.frontmatter.twitch && <a
+            href={`https://www.twitch.tv/${data.mdx.frontmatter.twitch}`}
+            target="_blank"
+            className="block text-center no-underline bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
+          >
+            Guarda su Twitch
+          </a>}
         </div>
         <div className="prose">
           <p>{data.mdx.frontmatter.description}</p>
@@ -60,6 +67,7 @@ export const query = graphql`
         title
         date
         youtube
+        twitch
         featureImage {
           childImageSharp {
             fluid(maxWidth: 1024) {

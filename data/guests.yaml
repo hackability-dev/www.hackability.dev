@@ -57,6 +57,11 @@
   bio: Frontend Dev
   linkedin: john-paul-du-0aa021144
   image: ./img/guests/johnpaul.jpg
+- id: gerson
+  name: Gerson Enriquez Cruz
+  bio: Frontend Dev
+  linkedin: gerson-enriquez
+  image: ./img/guests/gerson.jpg
 #
 #
 # - id: a unique nick for internal reference
