@@ -22,20 +22,23 @@ const EventPage: React.FC<{ data: any }> = ({ data }) => {
           <h1>{data.mdx.frontmatter.title}</h1>
         </div>
         <div className="my-10">
-          {data.mdx.frontmatter.youtube && <a
-            href={`https://youtu.be/${data.mdx.frontmatter.youtube}`}
-            target="_blank"
-            className="block text-center no-underline bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
-          >
-            Guarda su YouTube
-          </a>}
-          {data.mdx.frontmatter.twitch && <a
-            href={`https://www.twitch.tv/${data.mdx.frontmatter.twitch}`}
-            target="_blank"
-            className="block text-center no-underline bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
-          >
-            Guarda su Twitch
-          </a>}
+          {data.mdx.frontmatter.youtube ? (
+            <a
+              href={`https://youtu.be/${data.mdx.frontmatter.youtube}`}
+              target="_blank"
+              className="block text-center no-underline bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
+            >
+              Guarda su YouTube
+            </a>
+          ) : data.mdx.frontmatter.twitch ? (
+            <a
+              href={`https://www.twitch.tv/${data.mdx.frontmatter.twitch}`}
+              target="_blank"
+              className="block text-center no-underline bg-green-500 px-3 py-2 text-sm font-bold text-white rounded hover:bg-green-700"
+            >
+              Guarda su Twitch
+            </a>
+          ) : null}
         </div>
         <div className="prose">
           <p>{data.mdx.frontmatter.description}</p>
